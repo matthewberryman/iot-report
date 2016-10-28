@@ -1,6 +1,4 @@
 # Water Level Sensor Project
-## DFAT Agreement 71984 - Final Report
-#### SMART Infrastructure Facility, University of Wollongong, Australia
 ###### Dr Matthew Berryman, Dr Etienne Turpin, Dr Tomas Holderness, Mr Robert Ogie, Mr Frank Sedlar, Dr Nagesh Shukla
 30th September 2016
 
