@@ -215,22 +215,21 @@ The code for producing the graphs in the *unfiltered* and *filtered* subsubsecti
 
 **Figure 3.2.28. Graph of filtered depth data from sensor 4**<br />![Graph of filtered depth data from sensor 4](iot_graphs/4_depth_filtered.png "Figure 3.2.28. Graph of filtered depth data from sensor 4")
 
-# 4. Future Work and Conclusions
-## 4.1. Outcomes & sustainability
-Our IoT water level sensors have met our objectives and have proven useful at collecting generally accurate data, provided the key constraint around the maximum practical range of the sonar sensors is met. Battery life was the main limitation of our existing sensors. Both of these issues will be addressed and tested through real-world testing in Wollongong, before hopeful adoption in Jakarta and other flood-prone regions (subject to further funding). In particular, addressing the issue of power (which we have [already started](https://github.com/phenidone/cognicity-floodsensor/tree/hat-schematic) in conjunction with a collaborator) will help address environmental and operation sustainability.
+# 4. Future work
+## 4.1. Ongoing work
+Our IoT water level sensors have met our objectives and have proven useful at collecting generally accurate data, provided the key constraint around the maximum practical range of the sonar sensors is met. Battery life was the main limitation of our existing sensors. We have been working on new [low power flood sensors using LoRaWAN technology](https://github.com/smart-facility/ttn-lopy-water-level) that can push the battery life out to months.
 
-## 4.2. Future Work
-In future work we will be making the following improvements to sensors:
-* Solar panels and power management, for much longer operation between battery changes, which is the main limiting factor for wider, longer term use of the sensors.
-* Exploring other options for range sensing over longer distances.
-* Scheduled software updating of both the operating system as well as the sensor software.
-* Resolving the temperature and humidity sensor issues, either by software tweaks or selection of different hardware for that.
-* Adopting LoRaWAN technology, providing for low power, long range communications, unaffected by mobile base station congestion. This is contingent on community groups / telecommunications companies / us installing LoRaWAN gateways in key locations.
-* Update the web code to use a time series chart and make it adaptive based on the amount of data available.
+**Figure 4.1.1. Images of new flood sensors**<br />
+![New flood sensor (closed lid)](iot_report_images/new_flood_sensor_closed.jpg "Figure 4.1.1.a. New flood sensor (closed lid)")
+![New flood sensor (internals)](iot_report_images/new_flood_sensor_open.jpg "Figure 4.1.1.b. New flood sensor (internals)")
+
+We have been working on [serverless code](https://github.com/urbanriskmap/cognicity-sensors/tree/dev) for receiving data from these and other sensors.
+
+## 4.2. Ideas for further work
+In future work we will be making the following improvements to sensors and cloud-side code:
+* Considering use of solar power.
 * Further refine the data processing to:
   * remove known-inaccurate data, at least from display on the graph,
   * alerting if the depth goes above a set value, and
   * perform trash and theft detection.
 * Conducting data analytics work to combine data we collect from a larger number of sensors, with the models we have of the waterway network, for better operation of infrastructure to minimise the risk of flooding.
-
-In future work we will also be considering in more detail the value of QR codes for tweets, alongside our other options for obtaining precise geolocation.
