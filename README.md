@@ -1,10 +1,10 @@
 # Water Level Sensor Project
 ###### Dr Matthew Berryman, Dr Etienne Turpin, Dr Tomas Holderness, Mr Robert Ogie, Mr Frank Sedlar, Dr Nagesh Shukla
-30th September 2016
+30th September 2016 (progress update: 7th November 2017)
 
 # 1. Background
-[PetaJakarta.org](https://petajakarta.org) is an open source, open data web application for flood mapping
-in Jakarta. In the 2014–2015 monsoon we partnered with the [Jakarta Emergency Management Agency](http://bpbd.jakarta.go.id/) (BPBD DKI Jakarta) and [Twitter](https://twitter.com) in order to map social media data on flooding. More background on the work in that monsoon may be found in our [first white paper](https://petajakarta.org/banjir/en/research). For the 2015–2016 monsoon we added  [Qlue](http://www.qlue.co.id/) and [Detik Pasangmata](http://www.detik.com/)  as social media partners, mapping their social media reports on flooding, plus we also built a secure, custom interface (the [Cognicity Risk Evaluation Matrix](https://github.com/smart-facility/cognicity-rem-server)) for [BPBD DKI Jakarta](http://bpbd.jakarta.go.id/) to create a real-time flood depth map based on resident and emergency services reports.
+[PetaJakarta.org](https://petajakarta.org) (now [PetaBencana.id](https://petabencana.id/), running the latest code at https://github.com/urbanriskmap) is an open source, open data web application as deployed for flood mapping
+in Java, Indonesia. In the 2014–2015 monsoon we partnered with the [Jakarta Emergency Management Agency](http://bpbd.jakarta.go.id/) (BPBD DKI Jakarta) and [Twitter](https://twitter.com) in order to map social media data on flooding. More background on the work in that monsoon may be found in our [first white paper](https://petajakarta.org/banjir/en/research). For the 2015–2016 monsoon we added  [Qlue](http://www.qlue.co.id/) and [Detik Pasangmata](http://www.detik.com/)  as social media partners, mapping their social media reports on flooding, plus we also built a secure, custom interface (the [Cognicity Risk Evaluation Matrix](https://github.com/smart-facility/cognicity-rem-server)) for [BPBD DKI Jakarta](http://bpbd.jakarta.go.id/) to create a real-time flood depth map based on resident and emergency services reports.
 
 Thanks to a Department of Foreign Affairs and Trade (DFAT) grant (agreement number 71984) we were able to successfully trial the use of prototype Internet of Things (IoT) water level sensors. Additionally, with the same funding we were also able to trial the use of QR codes for automatically generated flood reports, and also conduct field testing of our Pebble FloodWatch app, which has now been published in the Pebble watch app store for general use. Brief descriptions of the IoT sensors, QR code and watch app are included below, followed by a more detailed report of the main component of the grant, IoT water level sensors.
 
@@ -217,13 +217,11 @@ The code for producing the graphs in the *unfiltered* and *filtered* subsubsecti
 
 # 4. Future work
 ## 4.1. Ongoing work
-Our IoT water level sensors have met our objectives and have proven useful at collecting generally accurate data, provided the key constraint around the maximum practical range of the sonar sensors is met. Battery life was the main limitation of our existing sensors. We have been working on new [low power flood sensors using LoRaWAN technology](https://github.com/smart-facility/ttn-lopy-water-level) that can push the battery life out to months.
+Our IoT water level sensors have met our objectives and have proven useful at collecting generally accurate data, provided the key constraint around the maximum practical range of the sonar sensors is met. Battery life was the main limitation of our existing sensors. We have been working on new [low power flood sensors using LoRaWAN technology](https://github.com/smart-facility/ttn-lopy-water-level) that can push the battery life out to months. We have been working on [serverless code](https://github.com/urbanriskmap/cognicity-sensors/tree/dev) for receiving data from these and other sensors.
 
 **Figure 4.1.1. Images of new flood sensors**<br />
 ![New flood sensor (closed lid)](iot_report_images/new_flood_sensor_closed.jpg "Figure 4.1.1.a. New flood sensor (closed lid)")
 ![New flood sensor (internals)](iot_report_images/new_flood_sensor_open.jpg "Figure 4.1.1.b. New flood sensor (internals)")
-
-We have been working on [serverless code](https://github.com/urbanriskmap/cognicity-sensors/tree/dev) for receiving data from these and other sensors.
 
 ## 4.2. Ideas for further work
 In future work we will be making the following improvements to sensors and cloud-side code:
